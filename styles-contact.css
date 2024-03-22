@@ -183,10 +183,20 @@ body {
   max-width: 100%;
   max-height: 200px;
 }
+/* 
 #portrait {
   max-height: 300px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
   clip-path: ellipse(150px 150px at 50% 50%);
+} */
+
+#portrait {
+  width: 40%;
+  height: auto;
 }
+
 h1 {
   /* FONT-FAMILY GOES HERE CHOOSE FROM TYPEKIT OR GOOGLE FONTS */
   font-size: 3em;
@@ -202,6 +212,19 @@ h2 {
   font-family: "Forma DJR Text", sans-serif;
   font-weight: 600;
 }
+
+
+#about-section {
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+#about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 
 p {
   /* FONT-FAMILY GOES HERE CHOOSE FROM TYPEKIT OR GOOGLE FONTS */
@@ -260,4 +283,31 @@ a:hover {
 }
 li:has(a:hover) {
   flex: 2;
+}
+@media only screen and (max-width: 1000px) {
+
+  #about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    align-items: center;
+  }
+
+  #portrait {
+  width: 100%;
+  max-width: 400px;
+}
+nav ul {
+  flex-direction: column;
+}
+nav li {
+  display: flex;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  width: 50%;
+  min-width: 175px;
+}
+li:has(a:hover) {
+  width: 100%;
+}
 }
